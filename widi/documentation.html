@@ -1,0 +1,1064 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta http-equiv="expires" content="0">
+   <META NAME="Author" CONTENT="Gregorio Robles & Co.">
+   <META NAME="Description" CONTENT="Documentation for Widi 0.1">
+   <META NAME="KeyWords" CONTENT="Open Source, Developers, Informatik und Gesellschaft, Linux">
+   <title>Widi 0.1 Documentation</title>
+
+   <STYLE type="text/css">
+      P { font-size: 12pt;
+          text-align: justify;
+          margin-left: 2%;
+          margin-right: 2%;
+          text-indent: 10pt;
+        }
+	P.title { font-size: 28pt;
+		text-align: center;
+		font-weight: bold;
+		margin-left: 1%;
+		margin-right: 1%;
+		text-indent: 2pt;
+		color: black;
+	}
+	P.subtitle { font-size: 21pt;
+		font-weight: bold;
+		text-align: left;
+		margin-left: 1%;
+		margin-right: 1%;
+		text-indent: 25pt;
+		color: black;
+	}
+	P.subsubtitle { font-size: 17pt;   
+		font-weight: bold;
+		text-align: left;
+		margin-left: 1%;
+		margin-right: 1%;
+		text-indent: 25pt;
+		color: black;
+	}
+	P.subsubsubtitle { font-size: 15pt;
+			font-weight: bold;
+		text-align: left;
+		margin-left: 1%;
+		margin-right: 1%;
+		text-indent: 25pt;
+		color: black;
+	}
+	P.authors { font-size: 12pt;
+		text-align: right;
+		margin-left: 2%;
+		margin-right: 2%;
+		text-indent: 10pt;
+		color: black;
+	}
+        P.function { font-size: 12pt;
+                     text-align: left;
+  		     font-weight: bold;
+                     margin-left: 2%;
+                     margin-right: 2%;
+                     text-indent: 10pt;
+	             font-family: verdana;
+        }
+	P.index { font-size: 14pt;
+		text-align: left;
+		margin-left: 7%;
+		margin-right: 2%;
+		text-indent: 0pt;
+		color: black;
+	}
+      UL { margin-left: 3%;
+	   font-size: 12pt;
+           text-align: left;
+           margin-left: 3%;
+           margin-right: 2%;
+       }
+      OL { margin-left: 3%;
+	   font-size: 14pt;
+           text-align: left;
+           margin-left: 3%;
+           margin-right: 2%;
+       }
+	</STYLE>
+
+</head>
+<body bgcolor="#FFCC33" topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0" marginheight="0" marginwidth="0">
+
+<BR>&nbsp;
+<P CLASS="title">Widi 0.1
+</P>
+
+<P Class="authors">Berlin, May 12 2001<BR>
+Gregorio Robles &lt;<A
+HREF="mailto:grex@scouts-es.org">grex@scouts-es.org</A>&gt;<BR>
+Hendrik &lt;<A HREF="mailto:">@</A>&gt;<BR>
+Nils &lt;<A HREF="mailto:">@</A>&gt;<BR>
+Ingo &lt;<A HREF="mailto:">@</A>&gt;<BR>
+<BR>&nbsp;
+<BR>Tutored by:
+Kei Ishii &lt;<A HREF="mailto:">@</A>&gt;<BR>
+</P>
+
+<!-- This is the index table -->
+<!-- The first line is for x. -->
+<!-- The second one for x.x. -->
+<!-- The third one for x.x.x. -->
+<!--
+<CENTER><TABLE align=center width=100%>
+<TR><TD colspan=3><P CLASS="index"></P></TD></TR>
+<TR><TD width=5%>&nbsp;</TD><TD colspan=2><P CLASS="index"></TD></TR>
+<TR><TD width=5%>&nbsp;</TD><TD width=5%>&nbsp;</TD><TD><P CLASS="index"></TD></TR>
+</TABLE></CENTER>
+-->
+
+<CENTER><TABLE align=center width=100% cellspacing=0>
+<TR><TD colspan=3><P CLASS="index">1. <A HREF="#copyleft">Copyright</A></P></TD></TR>
+
+<TR><TD colspan=3><P CLASS="index">2. <A HREF="#introduction">Introduction</A></P></TD></TR>
+
+<TR><TD colspan=3><P CLASS="index">3. <A HREF="#installation">Installation</A></P></TD></TR>
+<TR><TD width=5%>&nbsp;</TD><TD colspan=2><P CLASS="index">3.1. <A
+HREF="#fast_installation">Fast installation</A></TD></TR>
+<TR><TD width=5%>&nbsp;</TD><TD colspan=2><P CLASS="index">3.2. <A HREF="#before_starting">Before starting</A></TD></TR>
+<TR><TD width=5%>&nbsp;</TD><TD width=5%>&nbsp;</TD><TD><P
+CLASS="index">3.2.1. <A HREF="#phplib">About PHPLib</A></TD></TR>
+<TR><TD width=5%>&nbsp;</TD><TD width=5%>&nbsp;</TD><TD><P
+CLASS="index">3.2.2. <A HREF="#database_installation">About the Database</A></TD></TR>
+<TR><TD width=5%>&nbsp;</TD><TD colspan=2><P CLASS="index">3.3. <A
+HREF="#obtaining_it">Obtaining Widi</A></TD></TR>
+<TR><TD width=5%>&nbsp;</TD><TD colspan=2><P CLASS="index">3.4. <A HREF="#file_extraction">File extraction</A></TD></TR>
+<TR><TD width=5%>&nbsp;</TD><TD colspan=2><P CLASS="index">3.5. <A HREF="#configuration_and_personalization">Configuration and personalization</A></TD></TR>
+
+<TR><TD colspan=3><P CLASS="index">4. <A
+HREF="#functionality">Main Functionality</A></TD></TR>
+
+<TR><TD colspan=3><P CLASS="index">5. <A HREF="#international">International Support</A></P></TD></TR>
+<TR><TD width=5%>&nbsp;</TD><TD colspan=2><P CLASS="index">5.1. <A
+HREF="#normal_outputs">Main outputs</A></TD></TR>
+<TR><TD width=5%>&nbsp;</TD><TD colspan=2><P CLASS="index">5.2. <A
+HREF="#faq_file">Translation of the FAQ</A></TD></TR>
+<TR><TD width=5%>&nbsp;</TD><TD colspan=2><P CLASS="index">5.3. <A HREF="#contributors">Contributors</A></TD></TR>
+
+<TR><TD colspan=3><P CLASS="index">6. <A HREF="#files">Files listed and shortly
+explained</A></P></TD></TR>
+
+<TR><TD colspan=3><P CLASS="index">7. <A HREF="#database">Widi's
+database</A></P></TD></TR>
+<TR><TD width=5%>&nbsp;</TD><TD colspan=2><P CLASS="index">7.1. <A
+HREF="#xxxxxxxx">Table xxxxxx</A></TD></TR>
+
+<TR><TD colspan=3><P CLASS="index">8. <A HREF="#developers">For Developers</A></P></TD></TR>
+<TR><TD width=5%>&nbsp;</TD><TD colspan=2><P CLASS="index">8.1. <A
+HREF="#source_contribution">Source contribution</A></TD></TR>
+<TR><TD width=5%>&nbsp;</TD><TD colspan=2><P CLASS="index">8.2. <A
+HREF="#structure_of_a_page">Main structure of a page</A></TD></TR>
+<TR><TD width=5%>&nbsp;</TD><TD colspan=2><P CLASS="index">8.3. <A
+HREF="#applicatonname_functions">Widi Functions</A></TD></TR>
+<TR><TD width=5%>&nbsp;</TD><TD width=5%>&nbsp;</TD><TD><P CLASS="index">8.3.1
+<A HREF="#box">Functions in box.inc</A></TD></TR>
+<TR><TD width=5%>&nbsp;</TD><TD width=5%>&nbsp;</TD><TD><P CLASS="index">8.3.2 <A HREF="#cmtlib">Functions in cmtlib.inc</A></TD></TR>
+<TR><TD width=5%>&nbsp;</TD><TD width=5%>&nbsp;</TD><TD><P CLASS="index">8.3.3
+<A HREF="#lib">Functions in lib.inc</A></TD></TR>
+<TR><TD width=5%>&nbsp;</TD><TD width=5%>&nbsp;</TD><TD><P CLASS="index">8.3.4
+<A HREF="#statslib">Functions in statslib.inc</A></TD></TR>
+<TR><TD width=5%>&nbsp;</TD><TD width=5%>&nbsp;</TD><TD><P CLASS="index">8.3.5
+<A HREF="#translation">Functions in translation.inc</A></TD></TR>
+<TR><TD width=5%>&nbsp;</TD><TD colspan=2><P CLASS="index">8.4. <A HREF="#translations_for_developers">Supporting translations</A></TD></TR>
+
+
+<TR><TD colspan=3><P CLASS="index">9. <A HREF="#faq">FAQ</A></P></TD></TR>
+
+<TR><TD colspan=3><P CLASS="index">10. <A HREF="#todo">TODO</A></P></TD></TR>
+
+<TR><TD colspan=3><P CLASS="index">11. <A HREF="#references">References</A></P></TD></TR>
+
+<TR><TD colspan=3><P CLASS="index">12. <A HREF="#authors">About the authors</A></P></TD></TR>
+
+</TABLE></CENTER>
+
+
+<P>&nbsp;
+<A NAME="copyleft">
+<P CLASS="subtitle">1. Copyright
+
+<P>Widi is distributed under the GNU General Public License 2.0 or later.
+Its authors are Gregorio Robles (<A HREF="mailto:grex@scouts-es.org">grex@scouts-es.org</A>), xxx xxx xxx.
+
+<P>This program is free software; you can redistribute it and/or modify  it under the terms of the GNU General Public License as published by  the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+<P>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+<P>You should have received a copy of the GNU General Public License
+along with this program; if not, write to the
+<PRE>
+              Free Software Foundation, Inc.
+	      59 Temple Place, Suite 330
+	      Boston, MA
+	      02111-1307 USA
+</PRE>
+
+<P>&nbsp;
+<A NAME="introduction">
+<P CLASS="subtitle">2. Introduction
+
+<P>Widi is an xxx xxx xxx writen in <A HREF="http://www.php.net/">PHP3</A> and database independent. It includes multilangual support and graphical statistics.
+
+<P>Widi depends on the <A HREF="http://phplib.netuse.de/">PHPLib library</A> (version 7.2 or later).
+
+<P>You can see a fully working example of the Widi system at <A HREF="http://widi.berlios.de">http://widi.berlios.de</A>. A close look at it will show you what you can do with Widi. The Widi system we use has at this moment more than xxxx Open Source developer inputs and has been the main reason why we have made this software.
+
+<P>Widi is part of the the studies made at the "Informatik und Gesellschaft" (Computer Science and Society) Institute at the Technical University of Berlin. Please, have a look at <A HREF="http://ig.cs.tu-berlin.de">http://ig.cs.tu-berlin.de</A> for further information.
+
+<P>You can download the latest version of Widi at:
+<A HREF="http://developer.berlios.de/projects/widi">http://developer.berlios.de/projects/widi</A>
+
+<P>Widi Features:
+<UL>
+<LI>Database independence
+<LI>Simple, intuitive use of the system
+<LI>Documentation for further development and/or adjustment
+<LI>Comments
+<LI>Multilingual support
+<LI>Web browser independence
+<LI>Cache avoidance
+</UL>
+
+<P>&nbsp;
+<A NAME="installation">
+<P CLASS="subtitle">3. Installation
+
+<P>Important note about security:
+<UL>
+<LI>Widi's main directory and all its subdirectories are not protected in any way by us! Please make sure that you can put propperly <I>.htaccess</I> files in these directories (specially the include subdirectory). If someone is able to read the local.inc file in the include directory, operator (user name) and password for your database could be known and misused. For further information about <I>.htaccess</I> look at the Apache's documentation.
+</UL>
+
+<A NAME="fast_installation">
+<P CLASS="subsubtitle">3.1 Fast installation (for MySQL)
+
+<P>You need to have a webserver (we have tested the system with Apache), PHP3,
+PHPLib and MySQL installed in your system.
+
+<UL>
+<LI>user$ mysql -h <I>host</I> -u <I>database_superuser</I> -p
+<BR>(insert <I>superuser_password</I>)
+<LI>mysql> USE mysql;
+<LI>mysql> INSERT INTO user VALUES ( '<I>host</I>', '<I>operator</I>',
+PASSWORD('<I>operator_password</I>'), 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'N', 'N', 'N', 'N', 'N', 'N', 'N');
+<LI>mysql> FLUSH PRIVILEGES;
+<LI>mysql> CREATE DATABASE widi;
+<LI>mysql> exit;
+<LI>user$ tar -zxvf widi-0.1.tar.gz
+<LI>user$ mysql -h <I>host</I> -u <I>operator</I> -p < widi/sql/mysql.sql
+<BR>(insert the <I>operator_password</I>)
+<LI>user$ vi widi/include/local.inc
+<BR>(insert the correct database parameters; please, keep <I>widi</I>
+as the database name)
+<PRE>
+   var $Host     = "<I>host</I>";
+   var $Database = "widi";
+   var $User     = "<I>operator</I>";
+   var $Password = "<I>password</I>";
+</PRE>
+</UL>
+
+<P>Ok, that's it. You've finished installing and configuring Widi. Start your browser and visit  <I>http://yourserver/widi/index.php3</I>.
+
+<P>If things do not work, maybe you'll have to read the whole installation chapter :-(.
+
+<A NAME="before_starting">
+<P CLASS="subsubtitle">3.2. Before starting
+
+<P>You've got to look if your web server is correctly configurated and running. That means that:
+
+<UL>
+<LI>The web server is capable of recognising and executing PHP3 scripts in user directories
+<LI>PHP is compliled to work with the database your are going to work with.
+</UL>
+
+<P>Please, attend to the respective manuals and documentation for a propper installation.
+
+<A NAME="phplib">
+<P CLASS="subsubsubtitle">3.2.1. About PHPLib
+
+<P>For a correct functioning of Widi, PHPLib has to be installed. PHPLib is an usefull library which permits Widi to have database independence. PHPLib is published under the terms of the GNU Lesser General Public License
+(LGPL). For more information about PHPLib follow this link: <A HREF="http://phplib.netuse.de/">http://phplib.netuse.de/</A>.
+
+<P>Widi has been developed with the 7.2c version of PHPLib, which
+can be downlodaded from
+<A HREF="http://phplib.netuse.de/download/phplib-7.2c.tar.gz">http://phplib.netuse.de/download/phplib-7.2c.tar.gz</A>.
+
+<P>Please read carefully the documentation provided for PHPLib for a successfull installation. The installation of PHPLib is sufficient; you don't need to know more about PHPLib and its functioning for using the Widi system.
+
+<A NAME="database_installation">
+<P CLASS="subsubsubtitle">3.2.2. About the Database
+
+<P>The next step is to install and configure the database system. Widi has been tested at the Technical University of Berlin with MySQL, so that the following explanations are to be followed with that RDBMS. For other systems, the philosophy will be the same, but you will have to particularize the instructions.
+
+<P>You can download MySQL from:
+<A HREF="http://www.mysql.com/downloads">http://www.mysql.com/downloads</A>.
+
+<P>1. Install and configure the RDBMS
+
+<P>2. Create the user Widi needs:
+   <UL>
+   <LI>Login as MySQL's superuser (<I>host</I> should be <I>localhost</I> in
+   the default case)
+   <BR>user$ mysql -h <I>host</I> -u <I>database_superuser</I> -p
+   <BR>(insert <I>superuser_password</I>)
+   <LI>Choose the mysql database
+   <BR>(that's where the database users and their privileges are)
+   <BR>mysql> USE mysql;
+   <LI>Insert an operator user for Widi, its password and its privileges
+   <BR>mysql> INSERT INTO user VALUES ( '<I>host</I>', '<I>operator</I>',
+PASSWORD('<I>operator_password</I>'), 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'N', 'N', 'N', 'N', 'N', 'N', 'N');
+   <LI>"Commit" the changes
+   <BR>mysql> FLUSH PRIVILEGES;
+   </UL>
+
+<P>3. Create the data base:
+   <UL>
+   <LI>Create the data base (with widi as its name; see note below)
+   <BR>mysql> CREATE DATABASE widi;
+   <LI>Exit MySQL
+   <BR>mysql> exit;
+   </UL>
+
+<P>Note: It is important for a simple configuration of the system to name this database "widi". A different database name would imply editing and modifying many of the default configuration parameters in the local.inc file, which is not recommended.
+
+<A NAME="obtaining_it">
+<P CLASS="subsubtitle">3.3. Obtaining Widi
+
+<P>You can get the latest version of Widi at:
+<A HREF="http://developer.berlios.de/projects/widi">http://developer.berlios.de/projects/widi</A>
+
+<A NAME="file_extraction">
+<P CLASS="subsubtitle">3.4. File extraction
+
+<P>Due to security reasons you should not install or execute Widi
+as root. It's not even necessary.
+
+<P>The installation process is as following:
+
+<OL>
+<LI>choose the parent directory where you want Widi to be and cd into it
+<LI>verify that the user public_html exists and is accesible from the
+web
+<LI>uncompress Widi in the parent directory
+<BR>user$ tar -zvxf widi-0.1.tar.gz
+<LI>List the content of the directories. You should have a directory
+sourcewell with five subdirectories. Read the point "Files listed and shortly explained" for further information about the files.
+<BR>user$ ls -R
+<LI>create the database structures in the database
+<BR>user$ mysql -h <I>host</I> -u <I>operator</I> -p < widi/sql/mysql.sql
+<BR>(insert the <I>operator_password</I>)
+</OL>
+
+<A NAME="configuration_and_personalization">
+<P CLASS="subsubtitle">3.5. Configuration and personalization
+
+<P>The database configuration has to be done in local.inc; both are in the include directory. Please, at this point read another time the security note given at the beginning of point 3.
+
+<UL>
+<LI>user$ vi widi/include/local.inc
+<BR>(insert the correct database parameters; please, keep <I>widi</I> as the database name)
+<PRE>
+   var $Host     = "<I>host</I>";
+   var $Database = "widi";
+   var $User     = "<I>operator</I>";
+   var $Password = "<I>password</I>";
+</PRE>
+</UL>
+
+<P>If you want to personalize Widi, you will have to edit the
+config.inc file in the include directory. The configuration file is
+carefully commented; please, take your time for configuring the Widi system right.
+
+<P>Congratulations, you've finished installing and configuring Widi. Start your browser and visit http://yourserver/widi/index.php3.
+
+<P>&nbsp;
+<A NAME="functionality">
+<P CLASS="subtitle">4. Main Functionality
+
+<P>&nbsp;
+<A NAME="international">
+<P CLASS="subtitle">5. International support
+
+<P>Widi can be easily translated into different
+languages. If you see that Widi does not have support in your
+language, you're gladly invited to help us with the
+internationalization of Widi by sending us your translation.
+
+<P>You don't need to have any computer or programming experience to do a
+translation. Keep on reading and you'll find out how easy it is.
+
+<A NAME="normal_outputs">
+<P CLASS="subsubtitle">5.1. Main outputs
+
+<P>Download the lang-translate.inc file (it also comes in Widi's
+0.1 tarball) . If you edit it, you'll find lines
+like this:
+
+<PRE>
+     case "Home": $tmp = ""; break;
+</PRE>
+
+<P>We will explain it briefly: after the <I>case</I> you will see the English text to translate writen in
+quotes (in our example, the English text is "Home"). Then you'll find a
+sort of equation. The content of your translation from English into your language should
+be placed in between these second quotes. For example, in the case you were making a translation into German, this would be the result for this line:
+
+<PRE>
+     case "Home": $tmp = "Heim"; break;
+</PRE>
+
+<P>Ok, now that you're an expert, you'll notice that "Home" is translated
+into German as "Heim" ;-). The procedure just explained should be repeated with
+all the lines in this file. 
+
+<P>Once you're finished, save it as <I>YourLanguage-lang.inc</I> and please send it to the authors. We will include
+it in the next releases so that everybody can benefit of your work.
+
+<A NAME="faq_file">
+<P CLASS="subsubtitle">5.2. Translation of the FAQ
+
+<P>(TODO)
+
+<A NAME="contributors">
+<P CLASS="subsubtitle">5.3. Contributors
+
+<P>Here's a list of all the people that have contributed to the
+translation of Widi.
+
+<P>Main files:
+<BR>&nbsp;
+
+<CENTER>
+<TABLE width=95%>
+<TR><TD>Language</TD><TD>Translator</TD><TD>Version</TD><TD>Last Modified</TD></TR>
+<TR><TD>German</TD><TD>xxx</TD><TD>x.x.x</TD><TD>x May 2001</TD></TR>
+<TR><TD>Spanish</TD><TD>Gregorio Robles &lt;<A HREF="mailto:grex@scouts-es.org">grex@scouts-es.org</A>&gt;</TD><TD>x.x.x</TD><TD>x May 2001</TD></TR>
+</TABLE></CENTER>
+
+<P>&nbsp;
+<A NAME="files">
+<P CLASS="subtitle">6. Files and functionality
+
+<P>The following list gives all the files that come with Widi Version 0.1. It is interesting to have a look at it for any adaption and/or modification you would like to do to the system.
+
+<P>The list is in alphabetical order for each directory. For the main directory
+you'll find a column with the permission requirements to enter the page. The
+legend is at the bottom of the table.
+
+<P CLASS="function">Widi's main directory:
+
+<P><CENTER><table width=90% border=1>
+<TR><TD>index.php3</TD><TD>This is the index file</TD></TR>
+<TR><TD>stats.php3</TD><TD>Statistics of the system</TD></TR>
+<TR><TD>test.php3</TD><TD>Widi System Capabilities Test. It looks if PHPLib and the database are correctly configured for the system</TD></TR>
+</TABLE></CENTER>
+
+<P CLASS="function">Subdirectory include:
+<P>(Please, be aware of inserting your own security procedures to make this
+directory not public)
+
+<P><CENTER><table width=90% border=1>
+<TR><TD>English-lang.inc</TD><TD>Main English translation</TD></TR>
+<TR><TD>German-lang.inc</TD><TD>Main German translation</TD></TR>
+<TR><TD>Spanish-lang.inc</TD><TD>Main Spanish translation</TD></TR>
+<TR><TD>box.inc</TD><TD>Library with the boxes (tables)</TD></TR>
+<TR><TD>cmtlib.inc</TD><TD>Library for comments</TD></TR>
+<TR><TD>config.inc</TD><TD>Configuration file</TD></TR>
+<TR><TD>footer.inc</TD><TD>Common footer for almost all pages</TD></TR>
+<TR><TD>header.inc</TD><TD>Common header for almost all pages</TD></TR>
+<TR><TD>lang.inc</TD><TD>Library for translations</TD></TR>
+<TR><TD>lang-translate.inc</TD><TD>File used for translation contributors</TD></TR>
+<TR><TD>lib.inc</TD><TD>Base Library for Widi</TD></TR>
+<TR><TD>local.inc</TD><TD>PHPLib local configuration file</TD></TR>
+<TR><TD>menubar.inc</TD><TD>Left bar in the browser window. Provides ease of
+navigation. The links shown depend on the permissions of the visitor</TD></TR>
+<TR><TD>statslib.inc</TD><TD>Library for statistics</TD></TR>
+<TR><TD>top_strip.inc</TD><TD>Top strip on every page</TD></TR>
+<TR><TD>top_title.inc</TD><TD>Top title strip on every page</TD></TR>
+<TR><TD>translation.inc</TD><TD>Library for translations</TD></TR>
+</TABLE></CENTER>
+
+<P CLASS="function">Subdirectory images:
+
+<P><CENTER><table width=90% border=1>
+<TR><TD>leftbar.gif</TD><TD>Left end of statistics bar (taken from PHP-Nuke)</TD></TR>
+<TR><TD>mainbar.gif</TD><TD>Main statistics bar (tanken form PHP-Nuke)</TD></TR>
+<TR><TD>rightbar.gif</TD><TD>Right end of statistics bar (taken from PHP-Nuke)</TD></TR>
+</TABLE></CENTER>
+
+<P CLASS="function">Subdirectory sql:
+
+<P><CENTER><table width=90% border=1>
+<TR><TD>mysql.sql</TD><TD>MySQL structure of the Database (with some example entries)</TD></TR>
+</TABLE></CENTER>
+
+<P CLASS="function">Subdirectory doc:
+<P><CENTER><table width=90% border=1>
+<TR><TD colspan=2>Files with the Widi documentation, changelog, license, install, authors etc.</TD></TR>
+</TABLE></CENTER>
+
+
+<P>&nbsp;
+<A NAME="database">
+<P CLASS="subtitle">7. Widi's database structure
+
+<P>In the following section, we are going to introduce Widi's
+database structure. It may be interesting for developers to know what is stored
+in the Widi system and how the different tables look like.
+
+<P>For the database structure, please, have a look at the files in the sql
+subdirectory.
+
+<A NAME="xxxx">
+<P CLASS="subsubtitle">7.1. Table xxxxx
+
+<P>This table is xxx
+
+<P><CENTER><TABLE width=90% border=1>
+<TR><TD width=15%>NAME</TD><TD width=42%>EXPLANATION</TD><TD
+width=10%>TYPE</TD><TD width=5%>L</TD><TD width=3%>N</TD><TD width=25%>OTHERS</TD></TR>
+</TABLE></CENTER>
+
+<P Class=authors>L: Length
+<BR>N: Not Null
+
+<P>&nbsp;
+<A NAME="developers">
+<P CLASS="subtitle">8. For developers
+
+<P>Widi is Open Source, so you're invited to contribute to it.
+
+<P>The next paragrahps have been made with the idea of a developer who wants to
+make further development in Widi or who wants to make some
+modifications so that Widi suits his needs.
+
+<P>Note: PHP knowledge is needed for developing or modifying Widi. You should also have certain SQL experience if you want to handle with databases.
+
+<P>Please report to the authors any adaptions and/or modifications. This
+could help us knowing what Widi should implement in the future
+and making other Widi users benefit from your work.
+
+<P>For advanced uses, PHPLib should also be known. You can read about PHPLib's API in PHPLib's manual. At this moment, PHPLib is used only for database independence.
+
+<A NAME="source_contribution">
+<P CLASS="subsubtitle">8.1. Source contribution
+
+<P> If you're planning to contribute source, please read the following
+ information:
+<UL>
+<LI>All configuration data belongs to config.inc. The local.inc file
+   just is the local configuration for the PHPLib library. Please keep it free from other code.
+<LI>Commonly used functions should be added to lib.inc.
+<LI>Functions that refer to statistics belong to statslib.inc.
+<LI>Functions that are used for comments should be placed at
+   cmtlib.inc.
+<LI>Functions that handle boxes have to be inserted in box.inc.
+<LI>Obviously, you're free to use whatever coding style you want. But please
+   try to keep your code as simple as possible.
+<LI>Please, try to write all your outputs in English with the translate
+   function (explained later). This will help to keep the
+   internationalization of this project clear.
+<LI>If you want to be really helpful, write an entry for the ChangeLog.
+</UL>
+
+<P>Important: With Widi version xx.xx, development has switched to CVS.
+  The following method (anonymous CVS access) is preferred for new developers. The module you wish to check out must be specified as the <I>modulename</I>. When prompted for a password for anonymous, simply press the <I>Enter</I> key:
+<UL>
+<LI>Fetch the current CVS tree over anonymous CVS:
+<BR>user$ cvs -d :pserver:anonymous@cvs.berlios.de:/csroot/widi login
+<BR>[Password: <I>(just press <I>Enter</I> if you are an anonymous user)</I>]
+<BR>user$ cvs -z3 -d:pserver:anonymous@cvs.berlios.de:/cvsroot/widi co <I>modulename</I>
+<BR>[Updates from within the module's directory do not need the -d parameter]
+<LI>send us the file you've modified, or send us a diff.
+</UL>
+
+<P> We've also set up CVSWEB on <A HREF="http://developer.berlios.de/cvs/?group_id=89">http://developer.berlios.de/cvs/?group_id=89</A>.
+
+<P> Write access to the CVS tree is granted only to developers who have already
+  contributed something useful to Widi.  If you're interested in that,
+  please contact the authors.
+
+
+<A NAME="structure_of_a_page">
+<P CLASS="subsubtitle">8.2. Main structure of a page
+
+<BR>&nbsp;
+
+<A NAME="widi_functions">
+<P CLASS="subsubtitle">8.3. Widi Functions
+
+<P>If you're interested in further developing or in (re)using what is already
+coded, this section will help you to rapidly know what is available.
+
+<A NAME="box">
+<P CLASS="subsubsubtitle">8.3.1. Functions in box.inc
+
+<P>The box class is defined to make tables easier to implement in
+SourceAgency. This functions are used in almost all files in the SourceAgency system.
+
+<P CLASS="function">function box (...)
+
+<PRE>
+    function box ($box_width="",
+	          $frame_color="#000000",
+	          $frame_width="1",
+	          $title_bgcolor="#CCCCCC",
+	          $title_font_color="#000000",
+	          $title_align="",
+	          $body_bgcolor="#FFFFFF",
+	          $body_font_color="#000000",
+	          $body_align="");
+</PRE>
+
+<P>Constructor. The given parameters are the parameters by default; any
+other value will overwrite them.
+
+<P CLASS="function">function box_begin()
+
+<P>Begins the box. The box has to be constructed before with the box()
+function. This function requires box_end() at the end.
+
+<P CLASS="function">function box_end()
+
+<P>Ends the box. Requires box_begin() to be defined before in order to end it.
+
+<P CLASS="function">function box_title($title)
+
+<P>This function allows you to put the string $title as title of the box. This
+function should be placed after the box_begin() function.
+
+<P CLASS="function">function box_full($title, $text)
+
+<P>Given the strings title and text, the box is created. This type of
+box is usefull when printing error messages. 
+
+<P CLASS="function">function box_strip($title)
+
+<P>This function allows you to have subtitles in boxes. This function is very
+usefull when you have different classifications in the same box and want to
+have a title header (strip) for each one. This functions requires the box to be
+constructed with the box() function and to be beginned with box_begin().
+
+
+<A NAME="cmtlib">
+<P CLASS="subsubsubtitle">8.3.2. Functions in cmtlib.inc
+
+<P>The cmtlib library contains the functions needed for the supporting comments on projects.
+
+<P CLASS="function">function cmtform($query)
+
+<P>Shows the form to be filled to give a comment on a certain project. The query parameter is a SQL query that looks in the software table for the project with the given <I>id</I>. Projects that can be commented have to be not <I>pending</I>.
+
+<P CLASS="function">function cmtshow($query)
+
+<P>Shows the comment given for an projects. The query parameter is a SQL query with the information of the projects whose comments will be shown. If your aim is to  show all comments on a given project, this function has to be called several times.
+
+<P CLASS="function">function cmtmod($query)
+
+<P>This function is used by the <I>admin</I> to administrate comments. The query parameter is a SQL query with the information of the projects whose comments will be modified. While in cmtform($query) the fields are in blank,
+this function returns the fields with the actual values stored in the database
+as default entries to the form. 
+
+<P CLASS="function">function faqshow($query)
+
+<P>Shows the just inserted FAQ by the <I>admin</I>. The query parameter is a SQL query with the information of the faq being showed. For showing all the FAQs in the FAQ-page accessible to everybody (faq.php3), another algorithm is used (and that's why it appears differently), but you could use this one iteratively too with the same aim.
+
+<P CLASS="function">function faqmod($query)
+
+<P>This function is used by the <I>admin</I> to modify existing FAQs. While in faqform() the fields are in blank, this function returns the fields with the actual values stored in the database as default entries to the form. 
+
+<P CLASS="function">function faqform()
+
+<P>This function is used by the <I>admin</I> to insert new FAQs.
+
+<A NAME="lib">
+<P CLASS="subsubsubtitle">8.3.3. Functions in lib.inc
+
+<P>This is the main library. It contains all the functions that work with the
+projects, its parameters and main functionality. This functions are used in
+almost every Widi file.
+
+<P CLASS="function">function mysql_die()
+
+<P>Returns an error message in a box. This function should be called every time
+a failed database interaction occurs.
+This function will be deprecated in future versions of Widi,
+because all the interactions with databases are going to be
+implemented using PHPLib's API in order to achieve database independence.
+
+<P CLASS="function">function mktimestamp($time)
+
+<P>Returns the variable $timestamp. Transforms the time parameter
+properly into a value accepted by the (MySQL) database.
+
+<P>The use of timestamp in Widi's database gets a little clearer when we
+read the MySQL Manual: "The TIMESTAMP column type provides a
+type that you can use to automatically mark INSERT or UPDATE operations with
+the current date and time. If you have multiple TIMESTAMP columns, only the
+first one is updated automatically."
+
+<P CLASS="function">function timestr($timestamp)
+
+<P>Returns the variable $time. This function transforms the type timestamp
+used in MySQL into the wanted output.
+
+<P>It prints the date in this format: "%A, %e. %B %Y, %H:%M:%S %Z". An example
+output could be: "Monday, 1. Jan 2001, 15:46:15 CET".
+
+<P>Widi can translate the weekday and the month to the languages
+supported by the system. In our example, "Monday" and "January" will appear only for the English version.
+
+<P CLASS="function">function timestr_short($timestamp)
+
+<P>Returns the variable $time. This function transforms the type timestamp
+used in MySQL into the wanted output. This function is used in the
+top_strip.inc file from the include subdirectory that comes at the beginning of
+almost all Widi files. It prints the date in this
+format: "%a,%e.%b,%H:%M:%S". An example output would be:
+"Mon,1.Jan,15:46:15".
+
+<P>Widi can translate the weekday and the month to the languages
+supported by the system. In our example, "Mon" (that stays for Monday) and "Jan"
+(that stays for January) will appear only for the English version.
+
+<P CLASS="function">function timestr_comment($timestamp)
+
+<P>Returns the variable $time. This function transforms the type timestamp
+used in MySQL into the wanted output. This function is used to show the
+creation date of project comments.
+
+<P>The printed data format follows this rule: "%e. %b, %H:%M". An example
+output could be:
+"1. Jan, 15:46".
+
+<P>Widi can translate the month to the languages
+supported by the system. In our example, "Jan"
+(that stays for January) will appear only for the English version.
+
+
+<P CLASS="function">function appfull($query)
+
+<P>Shows the whole information stored about a project. The query parameter is the SQL query. 
+
+<P CLASS="function">function appcat($query,$title,$iter)
+
+<P>Shows the projects in a certain category. query is the SQL database query that will be worked on. title puts the name of the category as title of the table and iter allows to show the projects in steps of 10 projects each time.
+
+<P CLASS="function">function appdat($query)
+
+<P>This function just calls the function appd($query).
+
+<P CLASS="function">function appd($query)
+
+<P>Displays project data. The query parameter is the SQL query.
+
+<P CLASS="function">function appupdate($query)
+
+<P>This function calls the function appd($query) and adds at the end a line with the current status of the project (pending, deleted, modified, etc)
+
+<P CLASS="function">function appday($start)
+
+<P>Displays marginal project data. The start parameter gives the date for which the projects should be displayed. All the SQL queries and other things are done internally.
+
+<P CLASS="function">function updform($query)
+
+<P>Update form. The query parameter is the SQL query.
+
+<P CLASS="function">function insform()
+
+<P>Insert form. Displays the project just inserted.
+
+<P CLASS="function">function inssec($string)
+
+<P>Insert category. The string parameter has to be set to &quot;yes&quot; when the
+section is not in the categories table and has to be inserted.
+
+<P CLASS="function">function seccat($selected_sec, $selected_cat)
+
+<P>Displays the different section/category pairs as options of a HTML SELECT form. selected_sec and selected_cat are the section and category by default (the SELECTED attribute in the form).
+
+<P CLASS="function">function sec($selected)
+
+<P>Displays the different sections as options of a HTML SELECT form. selected is the section by default (the SELECTED attribute in the form).
+
+<P CLASS="function">function license($selected)
+
+<P>Displays the different licenses as options of a HTML SELECT form. row is the
+license by default (the SELECTED attribute in the form).
+
+<P CLASS="function">function urgency($int)
+
+<P>Urgency is stored in the database as an integer. Given this integer as a parameter, the
+urgency function returns the string equivalent.
+
+<CENTER><TABLE width=40% border=0 cellspacing=0>
+<TR><TD>Entered value</TD><TD>Urgency returns</TD></TR>
+<TR><TD>$int = 1</TD><TD>"low"</TD></TR>
+<TR><TD>$int = 2</TD><TD>"medium"</TD></TR>
+<TR><TD>$int = 3</TD><TD>"high".</TD><TR>
+<TR><TD colspan=2>The default value is "medium"</TD></TR>
+</TABLE></CENTER>
+
+<P CLASS="function">function show_more($iter,$maxiter,$url, $urlquery)
+
+<P>Shows projects of the current iteraction iter until it reaches ten or the
+maximum number of iteractions maxiter. The url and urlquery parameters allow to go forward and/or backwards in order: url is just the php3 page that will be called and urlquery the rest of the URL query (the parameters that follow the "?" in the URL).
+
+<P CLASS="function">function wrap($string,$width=75,$break=" ")
+
+<P>This functions wraps the input $string at the characters given by $break
+(which is by default a blank space) when the width of the string is greater
+than $width (which is by default 75 characters long).
+
+<P CLASS="function">function typestr($type)
+
+<P>The type of an project is stored in the database as a single
+character. Given this character as a parameter, the
+typestr function returns the string equivalent.
+
+<CENTER><TABLE width=40% border=0 cellspacing=0>
+<TR><TD>Entered value</TD><TD>typestr returns</TD></TR>
+<TR><TD>$type = "S"</TD><TD>"Stable"</TD></TR>
+<TR><TD>$type = "D"</TD><TD>"Development"</TD></TR>
+</TABLE></CENTER>
+
+<P>This function supports internally the translation function.
+
+<P CLASS="function">function increasecnt($id, $type)
+
+<P>Given the project id and the type of count (see table counter), this
+function increases that type of count for that project in the database.
+
+<P CLASS="function">function checkcnt($id, $ipaddr, $type)
+
+<P>This function checks if the project (given by its id) has increased its
+counting from the IP address (given by ipaddr) in the last day. The type gives
+the type of count (see table counter).
+
+<P>The table counter_check keeps track of all the countings made during the
+last hours. This functions looks if the project has an entry from the actual
+IP address in a counter type given by $type. If this occurs, the function increasecnt($id,
+$type) will not be called avoiding malicious increasing of project interest.
+
+<P CLASS="function">function nlmsg($period)
+
+<P>This function shows the contents of the news mailing lists. The period parameter is a string whose value can be "weekly" for the
+weekly mailing list or "daily" for the daily mailing list.
+
+<P CLASS="function">function mailuser($perms, $subj, $message)
+
+<P>Sends an e-mail message to the users with the <I>$perm</I> permission. The
+content of the message is given by the <I>$message</I> parameter and its subject by
+<I>$subj</I>. This function is used to give advice to editors when a new
+project is inserted, deleted or changed (modified not!) and to give advice to
+administrators when new users register.
+
+<A NAME="statslib">
+<P CLASS="subsubsubtitle">8.3.4. Functions in statslib.inc
+
+<P>The statslib library has been thought to develop the statistics for
+Widi. The boxes are implemented internally, so the developer
+only has to worry about the statistical implementation.
+
+<P>This library has been
+developed parallel to the box library, so you'll find common (and exclusive)
+features in them. Future versions may try to make both libraries converge.
+
+<P CLASS="function">function stats($result,$var,$message,$position)
+
+<P>This function returns an ordered list (a sort of top list) for the variable <I>$var</I>. <I>$var</I> gives the type for which the table is shown
+(pro_cnt, docs_cnt). <I>$result</I> is the database result for a given SQL
+input. <I>$message</I> is the title of the table. The <I>$position</I>
+parameter gives the starting position of the projects listed.
+
+<P>It does not require any previous box or table definition as it
+does this internally. The length of the graphic bar is also internally chosen.
+
+<P CLASS="function">function stats_title($message)
+
+<P>Displays the header of the table with the title given by $message. This function is
+similar to the box_title($title) function defined in box.inc.
+
+<P CLASS="function">function stats_subtitle($message)
+
+<P>Used to insert subtitles in the table. This function is
+similar to the box_strip($title) function defined in box.inc.
+
+<P CLASS="function">function stats_display($what,$count,$url)
+
+<P>This function displays the statistics graphically in one row. <I>$what</I>
+is a string with the name of what is displayed, <I>$count</I> gives the number of times it
+appears in the database and <I>$url</I> is the corresponding url.
+
+<P CLASS="function">function stats_display_alt($what,$count,$url,$total)
+
+<P>This function displays the statistics graphically in one row. As you might
+have noticed, this function is the stats_display($what,$count,$url) function
+with the aggregation of the <I>$total</I> parameter. <I>$total</I>
+is the total number of implied projects. You should use this function when
+you want to see compared distribution of project characteristics
+(licenses, urgency, etc.).
+
+<P CLASS="function">function stats_end()
+
+<P>Finishes the table. This function is similar to the box_end() function defined in box.inc.
+
+
+<A NAME="translation">
+<P CLASS="subsubsubtitle">8.3.5. Functions in translation.inc
+
+<P>This library is small, but very important. It has the translate
+function which allows Widi to be supported in several languages.
+
+<P CLASS="function">function translate($phrase)
+
+<P>Returns $tmp. phrase is a parameter that contains the string in
+Widi's native language, English. The returned value, $tmp, will
+be the string in the translated language. The translate function belongs to the
+translation object. On every Widi page, at the header, the variable $t is
+an initialization (construction) of this object.
+
+
+<A NAME="translations_for_developers">
+<P CLASS="subsubtitle">8.4. Supporting translations
+
+<P>The way the translation works is very simple. Widi's outputs are
+written by default in English, but there's an implemented
+function (the translate($phrase) function) that <I>translates</I> these outputs to
+other languages. In the include subdirectory, you'll find the files that are
+responsible for this miracle: the <I>Language</I>-lang.inc. These files contain
+the English to <I>Language</I> translations and help the translate($phrase)
+function with its work.
+
+<P>The translation procedure is very simple. Every page in Widi has a
+translation object constructed that is ready for use. This object, whose
+variable is <I>$t</I> contains a function which will be called for every string
+that should be translated.
+
+<P>It's better understood with an example. Imagine you would like to have the
+string <I>Home</I> be able to be translated in other languages other than
+English. For a normal output, we would write this code:
+
+<PRE>
+      echo "Home";
+</PRE>
+
+<P>When wanting to be able to have it translated, we will call the explained
+translation function of the $t object. Coded:
+
+<PRE>
+      echo $t->translate("Home");
+</PRE>
+
+<P>The translation function will see first what language the user has chosen and
+then return the string in $temp that corresponds to "Home" for that language.
+That means that if the visitor has
+chosen the German language, you will get this in your web browser as the output
+of the upper code:
+
+<PRE>
+      Heim
+</PRE>
+
+<P>And
+that's it. You'll have noticed how simple it is to support internationalization
+for Widi!
+
+
+<P>&nbsp;
+<A NAME="faq">
+<P CLASS="subtitle">9. FAQ
+
+<UL>
+<P>&nbsp;<LI>Is Widi database independent?
+<BR>The answer is yes. Widi uses PHPLib's functions to access the database, so every database supported by PHPLib should also support the Widi system. Up to now, we've only tested Widi in BerliOS with MySQL.
+
+<P>&nbsp;
+<LI>Does Widi work with PHP4?
+<BR>Theoretically yes. Please report the authors if you have got any problems.
+
+<P>&nbsp;
+<LI>more questions
+<BR>more answers
+
+<P>&nbsp;
+<LI>Why is Widi not in my language?
+<BR>Widi can be easily translated into different languages. If you see that Widi does not have support in your language, you're gladly invited to help us with the internationalization. Visit <A HREF="http://widi.berlios.de/translating.php3">http://widi.berlios.de/translating.php3</A>.
+
+</UL>
+
+<P>&nbsp;
+<A NAME="todo">
+<P CLASS="subtitle">10. TODO
+<UL>
+<LI>Any other ideas? Write the authors ;-)
+</UL>
+
+
+<P>&nbsp;
+<A NAME="references">
+<P CLASS="subtitle">11. References
+
+<P>Widi software:
+
+<UL>
+<LI>Widi Homepage: <A HREF="http://widi.berlios.de/">http://widi.berlios.de/</A>
+<LI>Developer Project page: <A HREF="http://developer.berlios.de/projects/widi">http://developer.berlios.de/projects/widi</A>
+<LI>Tarballs: <A HREF="http://developer.berlios.de/project/filelist.php?group_id=xxx">http://developer.berlios.de/project/filelist.php?group_id=xxx</A>
+<LI>Changelog: <A HREF="http://widi.berlios.de/CHANGELOG">http://widi.berlios.de/CHANGELOG</A>
+<LI>Screenshots (= example system): <A HREF="http://widi.berlios.de/">http://widi.berlios.de/</A>
+<LI>Documentation and Manuals: <A
+HREF="http://developer.berlios.de/docman/?group_id=xxx">http://developer.berlios.de/docman/?group_id=xxx</A> (or with the Widi tarballs)
+<LI>CVS tree (in web): <A HREF="http://cvs.berlios.de/cgi-bin/cvsweb.cgi/?cvsroot=widi">http://cvs.berlios.de/cgi-bin/cvsweb.cgi/?cvsroot=widi</A>
+</UL>
+
+<P>Programs and library dependences for Widi:
+
+<UL>
+<LI>PHP: <A HREF="http://www.php.net">http://www.php.net</A>
+<LI>Apache: <A HREF="http://www.apache.org">http://www.apache.org</A> (recommended web server)
+<LI>PHPLib: <A HREF="http://phplib.netuse.de/">http://phplib.netuse.de/</A>
+<LI>MySQL: <A HREF="http://www.mysql.com">http://www.mysql.com</A>
+<LI>PostgreSQL: <A HREF="http://www.postgres.org">http://www.postgres.org</A>
+</UL>
+
+<P>Other references:
+
+<UL>
+<LI>Institut f&uuml; Informatik und Gesellschaft: <A HREF="http://ig.cs.tu-berlin.de">http://ig.cs.tu-berlin.de</A>
+<LI>TU-Berlin: <A HREF="http://www.tu-berlin.de">http://www.tu-berlin.de</A>
+<LI>BerliOS: <A HREF="http://www.berlios.de">http://www.berlios.de</A>
+<LI>Free Software Foundation: <A
+HREF="http://www.fsf.org">http://www.fsf.org</A>
+<LI>phpMyAdmin: <A HREF="http://phpwizard.net/projects/phpMyAdmin">http://phpwizard.net/projects/phpMyAdmin</A>
+<LI>phpPgAdmin:
+<LI>Horde: <A HREF="http://www.horde.org">http://www.horde.org</A>
+</UL>
+
+<P>&nbsp;
+<A NAME="authors">
+<P CLASS="subtitle">12. About the authors:
+
+<UL>
+<LI>Gregorio Robles &lt;<A HREF="mailto:grex@scouts-es.org">grex@scouts-es.org</A>&gt;
+<BR>Gregorio Robles is a Spanish exchange student who is doing his diploma
+thesis at the Technical University of Berlin in contact with BerliOS.
+
+<BR>&nbsp;
+<LI>xxx xxx &lt;<A HREF="mailto:xxx">xxxx</A>&gt;
+<BR>Brief introduction
+
+</UL>
+
+<P>You can find the authors writing en e-mail to <A HREF="mailto:widi-support at lists.berlios.de">widi-support at lists.berlios.de</A>.
+
+<P class="Authors"><FONT SIZE=-2>Edited in HTML using GNU Emacs 20.7.1 on an i386 Debian GNU/Linux</FONT>
+
+</BODY>
+</HTML>
