@@ -1,0 +1,23 @@
+This software has been made for a study on Open Source Developers at the Technical University of Berlin.
+
+Gregorio Robles <grex@scouts-es.org>
+Hendrik <@>
+Nils <@>
+Ingo <@>
+
+Supervision:
+(from the "Informatik und Gesellschaft" Institute)
+http://ig.cs.tu-berlin.de
+
+Kei Ishii <@>
+Robert Gehring <@>
+Prof.Dr. Bernd Lutterbeck <@>
+
+- - - - - - - - - - - - - - - - - - - - - - - -
+
+This software is based on SourceWell: http://sourcewell.berlios.de/html, which is a software package written by:
+
+Luty Henckel <lutz.henckel@fokus.gmd.de>
+Gregorio Robles <grex@scouts-es.org>
+
+SourceWell is GPL, so we just took it and reused some functions ;-).
